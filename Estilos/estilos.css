@@ -5,20 +5,13 @@ body{
 }
 
 
-header{
-    background-color: rgb(26, 26, 76);
-    color: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
-    
-}
 header div{
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     text-align: center;
     padding:   2%;
     border-radius: 10px;
-    
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 header div img{
@@ -28,7 +21,6 @@ header div img{
 }
 
 .container{
-    margin: 1rem 0rem;
     border-radius: 10px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     height: 90dvh ;
@@ -81,9 +73,7 @@ hr{
 .contenido_seccion1 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
+    align-items: center;;
 }
 .contenido_seccion1 span {
     margin-left: 10%;
@@ -91,9 +81,9 @@ hr{
 }
 
 .contenido_seccion1 img {
-    margin-left: 0px;
-    width: 4rem;
-    margin-top: 20px;
+    background-color: antiquewhite;
+    margin-left: 50px;
+    width: 9rem;
 }
 
 .boton{
@@ -291,13 +281,13 @@ a{
 
 @media (min-width:768px ) {
     body {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Tamaño de fuente aumentado para pantallas grandes */
     }
     h1 {
-        font-size: 1.8rem; 
+        font-size: 1.8rem; /* Tamaño de fuente aumentado para pantallas grandes */
     }
     p {
-        font-size: 1rem;
+        font-size: 1rem; /* Tamaño de fuente aumentado para párrafos en pantallas grandes */
     }
     .segunda_seccion{
         flex-direction: row;
@@ -326,13 +316,7 @@ a{
         text-align: center; 
         background-color: rgb(26, 26, 76);
         color: aliceblue; 
-        height: 80dvh;
-        flex-direction: row;
-    }
-
-    .contenido_seccion1 img {
-        margin-left: 50px;
-        width: 9rem;
+        height: 80dvh;;
     }
 
 
@@ -388,6 +372,8 @@ a{
         background-color: aliceblue;
     }
     
+
+    
 }
 
 
@@ -429,3 +415,45 @@ a{
         padding: 10px;
     }
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.75); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.container.animate {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.container.tercera_seccion.animate {
+    animation: slideInFromRight 1s forwards;
+}
+
+
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container.cuarta_seccion.animate {
+    animation: slideInFromTop 1s forwards;
+}
+
