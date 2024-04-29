@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="Estilos/estilos.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="animacion_juan/index.css">
 
 
     <link rel="stylesheet" href="css/app.css">
@@ -57,10 +58,10 @@
             </span>
             <div class="carrousel">
                 <div class="grande">
-                    <img src="" alt="Imagen 1" class="img">
-                    <img src="" alt="Imagen 1" class="img">
-                    <img src="" alt="Imagen 1" class="img">
-                    <img src="" alt="Imagen 1" class="img">
+                    <img src="logoFernando.png" alt="Imagen 1" class="img">
+                    <img src="logoFernando.png" alt="Imagen 1" class="img">
+                    <img src="logoFernando.png" alt="Imagen 1" class="img">
+                    <img src="logoFernando.png" alt="Imagen 1" class="img">
                 </div>
                 <ul class="puntos">
                     <li class="punto activo"></li>
@@ -76,7 +77,6 @@
                 <hr style="border: 3px solid rgb(26,26,76); width: 100%;">
             </span>
             <div>
-                <br>
                 <span >Tú eliges: asiste de forma presencial o accede a nuestras clases online a través de los medios más avanzados con clases mediante videoconferencia en directo.</span>
                 
             </div>
@@ -187,40 +187,9 @@
             $('#section3').toggleClass('active');
         });
     });
-
-
-
-
-
-    const carouselSlide = document.querySelector(".carousel-slide");
-    const images = document.querySelectorAll(".carousel-slide img");
-    
-    // Botones
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-    
-    // Contador
-    let counter = 1;
-    const size = images[0].clientWidth;
-    
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    
-    // Botones de evento
-    nextBtn.addEventListener("click", () => {
-        if (counter >= images.length - 1) return;
-        carouselSlide.style.transition = "transform 0.5s ease-in-out";
-        counter++;
-      carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    });
-    
-    prevBtn.addEventListener("click", () => {
-        if (counter <= 0) return;
-        carouselSlide.style.transition = "transform 0.5s ease-in-out";
-        counter--;
-      carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    });
     
 </script>
+<script src="js_juan/index.js"></script>
 
 </body>
 </html>
