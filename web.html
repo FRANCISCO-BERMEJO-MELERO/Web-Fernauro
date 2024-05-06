@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Fernauro">
+    <title>Fernauro</title>
+    <link rel="stylesheet" href="Estilos/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    
+
+    <script src="js/app.js"></script>
+
+
+<!--RESEÑAS-->
+<link rel="stylesheet" href="reseñas.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <header>
+        <div>
+            <div>
+                <a href="https://fernauro.es/"><img src="data:image/jpeg;base64,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"> </a>       
+                <a href="https://www.sadeco.es/"><img src="Recursos/download-removebg-preview (2) (1).png" ></a>
+            </div>
+            <div class="enlaces">
+                <a href="#info">Información</a>
+                <br>
+                <a href="#testimonios">Testimonios</a>
+                <br>
+                <a href="#preguntas">Preguntas</a>
+                <br>
+                <a href="#contacto">Conctacto</a>
+            </div>
+        </div>
+    </header>
+</head>
+<body>
+    <div class="portada">
+        <div class="item1">
+            <div>
+                <h1>
+                    <!--"Prepárate para el Éxito: Curso de Preparación de Oposiciones"
+                        "El Camino Hacia tu Futuro Profesional: Preparación de Oposiciones"
+                        "Convierte tu Sueño en Realidad: Curso Inte8sivo de Oposiciones"
+                        "Preparación Profesional para Opositores: ¡Asegura tu Plaza!"
+                        "Tu Paso Seguro hacia el Empleo Público: Preparación de Oposiciones"
+                        "La Clave del Éxito: Curso Especializado en Preparación de Oposiciones"
+                        "Construye tu Carrera con Nosotros: Preparación Integral de Oposiciones"
+                        "Destaca en las Oposiciones: Curso de Preparación con Expertos"
+                    -->
+                    <div class="titulo">Prepara tus Oposiciones con Fernauro</div>
+                    
+                </h1>
+                <hr style="border: 1px solid rgb(26,26,76) !important; width: 80%; ">
+                <h2>
+                    <div class="texto"> El Éxito está a tu Alcance</div>
+                </h2>
+                <div>
+                    <a href="#contacto">
+                        <button class="boton_portada fa-beat" href="#contacto">
+                            Apúntate
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item2">
+            <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg" alt="imagen" />
+        </div>
+    </div>
+
+    <div class="container2 primera_seccion" id="info">
+        <br>
+        <h1>Información</h1>
+        <hr>
+        <br><br>
+        <div class="contenido_seccion1">
+            <span>
+                Fernauro ofrece preparación presencial y online para las oposiciones de peón limpiador en Sadeco. Con un enfoque integral y recursos exclusivos, te ayudamos a alcanzar el éxito. Modalidades flexibles y acompañamiento personalizado. ¡Únete a nosotros y haz realidad tu carrera en el sector público!
+                <br>
+                <br>
+                <a href="#contacto">
+                    <button class="boton_portada" href="#contacto">
+                        + Info 
+                    </button>
+                </a>
+            </span>
+        </div>
+    </div>
+
+    <div class="segunda_seccion"  id="testimonios">
+        <section class="testimonial-page">
+                <div class="test-reviews">
+                    <div class=" row justify-content-center ">
+                        <div class="col-xl-4 col-sm-6">
+                            <a href="https://www.google.com/search?hl=es-ES&gl=es&q=Academia+de+Fernauro,+Plaza+Arzobispo+Romero+Mengibar+1-b,+14014+C%C3%B3rdoba&ludocid=13095537862226213549&lsig=AB86z5XtAeZkF4seHLn2yncsYWNh&hl=es&gl=ES&sa=X&ved=2ahUKEwjL1JaV-fCFAxWSBfsDHZ03C3wQ3PALegQIMxAV#lrd=0xd6cdfe449f360f3:0xb5bcb24d74abfaad,1" style="text-decoration: none;">
+                            <div class="card-reviews">
+                                <div class="card">
+                                    <div class="layer"></div>
+                                    <div class="content">
+                                        
+                                        <div class="card-body text-center ">
+                                            <p class="description"> Buena enseñanza , siempre disponible a dudas , sin dudarlo estaré siempre agradecida a Fernando que nos ha ayudado mucho , gracias.</p>
+                                        </div>
+                                        
+                                        <hr class="mt-auto mb-4" style="border: 2px solid rgb(26,26,76) !important;"        >
+                                        <div class="card-bottoms">
+                                            <h4 class="user-name">Silvia Orihuela nsrsnjo</h4>
+                                            <p>
+                                                <span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                        <div class="col-xl-4 col-sm-6">
+                            <a href="https://www.google.com/search?hl=es-ES&gl=es&q=Academia+de+Fernauro,+Plaza+Arzobispo+Romero+Mengibar+1-b,+14014+C%C3%B3rdoba&ludocid=13095537862226213549&lsig=AB86z5XtAeZkF4seHLn2yncsYWNh&hl=es&gl=ES&sa=X&ved=2ahUKEwjL1JaV-fCFAxWSBfsDHZ03C3wQ3PALegQIMxAV#lrd=0xd6cdfe449f360f3:0xb5bcb24d74abfaad,1" style="text-decoration: none;">
+                            <div class="card-reviews">
+                                <div class="card">
+                                    <div class="layer"></div>
+                                    <div class="content">
+                                        
+                                        <div class="card-body text-center ">
+                                            <p class="description">Lugar excelente tanto por la formación de sus profesores como por la calidad educativa. Sin duda repetiría en acudir ante cualquier necesidad educativa. Es impresionante la cantidad de cursos que ofrecen y las facilidades para adaptarse a tus horarios.</p>
+                                        </div>
+                                        
+                                        <hr class="mt-auto mb-4" style="border: 2px solid rgb(26,26,76) !important;">
+                                        <!--  -->
+                                        <div class="card-bottoms">
+                                            <h4 class="user-name">Esther lópez pavón</h4>
+                                            <p>
+                                                <span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                <div class="col-xl-4 col-sm-6">
+                    <a href="https://www.google.com/search?hl=es-ES&gl=es&q=Academia+de+Fernauro,+Plaza+Arzobispo+Romero+Mengibar+1-b,+14014+C%C3%B3rdoba&ludocid=13095537862226213549&lsig=AB86z5XtAeZkF4seHLn2yncsYWNh&hl=es&gl=ES&sa=X&ved=2ahUKEwjL1JaV-fCFAxWSBfsDHZ03C3wQ3PALegQIMxAV#lrd=0xd6cdfe449f360f3:0xb5bcb24d74abfaad,1" style="text-decoration: none;">
+                            <div class="card-reviews">
+                                <div class="card">
+                                    <div class="layer"></div>
+                                    <div class="content">
+                                        
+                                        <div class="card-body text-center ">
+                                            <p class="description">Buena enseñanza perfectos profesores y buena comunicacion.</p>
+                                        </div>
+                                        
+                                        <hr class="mt-auto mb-4" style="border: 2px solid rgb(26,26,76) !important;">
+                                        <!--  -->
+                                        <div class="card-bottoms">
+                                            <h4 class="user-name">David Cobos Sánchez</h4>
+                                            <p>
+                            <span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span><span class="fa fa-star text-warning mr-1"></span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </a>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="container2 tercera_seccion" id="preguntas">
+        <br>
+        <h1>Preguntas frecuentes</h1>
+        <hr>
+        <br>
+        <div class="preguntas_imagen">
+        
+        <div><img src="Recursos/question-mark-1750942_640.webp" ></div>
+        <div class="desplegable">
+            <div class="desplegable-item">
+                <div class="desplegable-title">
+                    <span>Requisitos</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="desplegable-content">
+                    <br>
+                    <p>-18 años o más.</p>
+                    <p>-Graduado Escolar o equivalente.</p>
+                    <p>-Para grupo con discapacidad: discapacidad del 33% o superior.</p>
+                    <p>-Sin historial disciplinario, inhabilitación o sanciones graves en el sector público o privado.</p>
+                </div>
+            </div>
+            <div class="desplegable-item">
+                <div class="desplegable-title">
+                    <span>Salario</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="desplegable-content">
+                    <br>
+                    <p>El Peón Limpiador percibirá 1.389,12 € de salario base.</p>
+                </div>
+            </div>
+            <div class="desplegable-item">
+                <div class="desplegable-title">
+                    <br>
+                    <span> ¿Cuáles son las plazas ofertadas?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="desplegable-content">
+                    <br>
+                    <p>La selección para Peón Limpiador es del tipo Concurso-oposición. Por un lado se tendrán en cuenta los méritos que aporten los aspirantes al puesto (experiencia, formación...), que se le sumaran a la fase de oposición</p>
+                </div>
+            </div>
+            <div class="desplegable-item">
+                <div class="desplegable-title">
+                    <span> ¿Cuál es es el temario?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="desplegable-content">
+                    <br>
+                    <p>Los temas para la prepación a Peón Limpiador son:</p>
+                    <p>1. Ordenanza de Higiene Urbana de Córdoba</p>
+                    <p>2. Convenio Colectivo de Sadeco</p>
+                    <p>3. Riesgos laborales como Peón Limpiador</p>
+                    <p>4.Memoria 2018</p>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+    </div>
+
+    <div class="cuarta_seccion" id="contacto">
+        <h1>CONTACTA CON NOSOTROS</h1>
+        <hr style="border: 2px solid rgb(26,26,76) !important;">
+        <h4>Correo electrónico</h4>
+        <a href="mailto:auladefernauro@fernauro.es">auladefernauro@fernauro.es</a>
+        <h4>Número de teléfono</h4>
+        <a href="tel:+ 34634586438">+34 634 58 64 38</a>
+        <h4>¿Dónde nos encontramos?</h4>
+        <a class="ubicacion" href="https://www.google.com/maps/place/data=!4m2!3m1!1s0xd6cdfe449f360f3:0xb5bcb24d74abfaad?sa=X&ved=1t:8290&ictx=111">Plaza Arzobispo Romero Mengibar 1-b, 14014 Córdoba</a>
+        <br><br>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.3526783868415!2d-4.757279388579227!3d37.89881847183737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdfe449f360f3%3A0xb5bcb24d74abfaad!2sAcademia%20de%20Fernauro!5e0!3m2!1ses!2ses!4v1713779582796!5m2!1ses!2ses" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+        </div>
+    </div>
+
+    <div class="footer ">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/auladefernaur/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://fernauro.es/"><i class="fab fa-google fa-beat-fade"></i></a>
+            <a href="tel:+34634586438"><i class="fa fa-phone"></i></a>
+            <a href="https://wa.me/34634586438"><i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i></a>
+            <a  href="mailto:auladefernauro@fernauro.es"><i class="fa fa-envelope"></i></a>
+        </div>
+        <hr>
+        <p>&copy;<span id="ano-actual"></span> Fernauro</p>
+        <p>Todos los derechos reservados.</p>
+    </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.desplegable-title').click(function() {
+        var $item = $(this).closest('.desplegable-item');
+        $item.toggleClass('active');
+        $item.siblings().removeClass('active');
+        });
+        $('#toggle-section1').click(function() {
+            $('#section1').toggleClass('active');
+        });
+        
+        $('#toggle-section2').click(function() {
+            $('#section2').toggleClass('active');
+        });
+        
+        $('#toggle-section3').click(function() {
+            $('#section3').toggleClass('active');
+        });
+    });
+    
+</script>
+<script src="js/index.js"></script>
+<script>
+    // Crear un nuevo objeto de fecha
+    var fechaActual = new Date();
+
+    // Obtener el año actual
+    var añoActual = fechaActual.getFullYear();
+
+    // Mostrar el año actual en el elemento con id="año-actual"
+    document.getElementById("ano-actual").innerText = "" + añoActual;
+</script>
+</body>
+</html>

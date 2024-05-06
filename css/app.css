@@ -1,0 +1,89 @@
+li {
+  list-style-type: none;
+}
+
+.carrousel {
+  width: 100%; /* Reducido el ancho */
+  max-width: 80em; /* Reducido el ancho máximo */
+  padding: 1em; /* Reducido el padding */
+  transition: all 0.4s ease;
+  border-radius: 0.5em; /* Reducido el radio de borde */
+  background-color: aliceblue;
+  overflow: hidden;
+}
+
+.carrousel .grande {
+  width: 400%; /* Reducido el tamaño */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  transition: all 0.4s ease;
+  border-radius: 0.5em; /* Reducido el radio de borde */
+  background-color: aliceblue;
+  padding: 1.5em; /* Reducido el padding */
+  transition: all 0.5s ease;
+  transform: translateX(0%);
+}
+
+.carrousel .img {
+  width: calc( 100% / 4 - 2em); /* Reducido el tamaño de las imágenes */
+  min-height: 7vh; /* Reducido el alto mínimo */
+  color: black;
+  transition: all 0.4s ease;
+  border-radius: 0.5em; /* Reducido el radio de borde */
+  background-color: aliceblue;
+}
+
+.carrousel .puntos {
+  width: 100%;
+  margin: 0.5em 0 0; /* Reducido el margen superior */
+  padding: 0.2em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrousel .punto {
+  width: 1.5em; /* Reducido el tamaño de los puntos */
+  height: 1.5em; /* Reducido el tamaño de los puntos */
+  margin: 0.5em 0.5em 0; /* Reducido el margen */
+  color: black;
+  transition: all 0.4s ease;
+  border-radius: 0.5em; /* Reducido el radio de borde */
+  background-color: aliceblue;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.carrousel .punto.activo {
+  background-color: rgb(26, 26, 76);
+}
+
+
+@media (min-width:767px) {
+  .carrousel {
+    padding: 1em; /* Reducido el padding */
+    transition: all 0.4s ease;
+    border-radius: 1em; /* Reducido el radio de borde */
+  }
+
+  .carrousel .grande {
+    border-radius: 0.5em; /* Reducido el radio de borde */
+    padding: 1em; /* Reducido el padding */
+  }
+  
+}   
+
+@media (min-width:320px) and (max-width:767px) {
+  .carrousel {
+    width: 100%; /* Reducido el ancho */
+    max-width: 15rem; /* Reducido el ancho máximo */
+    padding: 1em; /* Reducido el padding */
+    transition: all 0.4s ease;
+    border-radius: 0.5em; /* Reducido el radio de borde */
+    background-color: aliceblue;
+    overflow: hidden;
+  }
+}
